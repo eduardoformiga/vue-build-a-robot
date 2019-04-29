@@ -37,8 +37,8 @@
 export default {
   name: 'Cart',
   computed: {
-    cart() { return this.$store.state.cart; },
-    cartSaleItens() { return this.$store.getters.cartSaleItens; },
+    cart() { return this.$store.state.robots.cart; },
+    cartSaleItens() { return this.$store.getters['robots/cartSaleItens']; },
   },
 };
 </script>

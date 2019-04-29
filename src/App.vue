@@ -14,9 +14,7 @@
           </li>
           <li class="nav-item cart">
             <router-link class="nav-link" to="/cart" exact>Cart</router-link>
-            <div class="cart-itens">
-              {{cart.length}}
-            </div>
+            <div class="cart-itens">{{cart.length}}</div>
           </li>
         </ul>
       </nav>
@@ -33,11 +31,12 @@
 </template>
 
 <script>
+
 export default {
   name: 'app',
   computed: {
     cart() {
-      return this.$store.state.cart;
+      return this.$store.state.robots.cart;
     },
   },
 };
