@@ -1,6 +1,5 @@
 # build-a-bot
 
-
 ## Project setup
 ```
 npm install
