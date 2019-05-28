@@ -64,7 +64,7 @@ import CollapsibleSection from '../shared/CollapsibleSection.vue';
 
 export default {
   name: 'RobotBuilder',
-  created() {
+  mounted() {
     this.getParts();
   },
   components: { PartSelector, CollapsibleSection },
@@ -102,7 +102,7 @@ export default {
     },
   },
   methods: {
-    ...mapActions('robots', ['getParts, addRobotToCart']),
+    ...mapActions('robots', ['getParts', 'addRobotToCart']),
     addToCart() {
       const robot = this.selectedRobot;
       // eslint-disable-next-line
