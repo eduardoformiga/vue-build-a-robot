@@ -1,9 +1,26 @@
 <template>
-  <div class="part" :class="position">
-    <img @click="showPartInfo()" :src="selectedPart.src" title="arm">
-    <button @click="selectPreviousPart()" class="prev-selector"></button>
-    <button @click="selectNextPart()" class="next-selector"></button>
-    <span class="sale" v-show="selectedPart.onSale">Sale!</span>
+  <div
+    class="part"
+    :class="position"
+  >
+    <img
+      @click="showPartInfo()"
+      :src="selectedPart.src"
+      title="arm"
+    >
+    <button
+      @click="selectPreviousPart()"
+      class="prev-selector"
+    ></button>
+    <button
+      @click="selectNextPart()"
+      class="next-selector"
+    ></button>
+    <span
+      v-pin:position.right.bottom
+      class="sale"
+      v-show="selectedPart.onSale"
+    >Sale!</span>
   </div>
 </template>
 
@@ -80,9 +97,6 @@ export default {
   border: 3px solid #aaa;
 }
 .sale {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
   color: white;
   background-color: red;
   padding: 3px;
